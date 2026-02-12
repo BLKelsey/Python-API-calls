@@ -5,7 +5,7 @@ def test_post_request():
     # Define the API endpoint
     url = "https://jsonplaceholder.typicode.com/posts"
 
-    # Data to be sent in the POST request
+    # Payload for the POST request
     data = {
         "name": "Brian",
         "email": "name@gmail.com"
