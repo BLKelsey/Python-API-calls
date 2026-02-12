@@ -3,5 +3,8 @@ import pytest
 
 
 def test_get_request():
-    response = requests.get("http://api.zippopotam.us/us/90210")
+    response = requests.get("https://jsonplaceholder.typicode.com/users/1")
+    
+    print("Status Code:", response.status_code)
+    print("Response Body:", response.json())
     assert response.status_code == 200
