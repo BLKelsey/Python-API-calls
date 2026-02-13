@@ -18,3 +18,6 @@ def test_post_fail_request():  # Pytest will detect and run this function as a t
     except requests.exceptions.HTTPError as error:  # Catch only HTTP status-related errors
         print("Caught HTTPError:", error)           # Print the exception message
         print("Status Code inside except:", response.status_code)  # Confirm expected 404 error code
+        
+         # If anything unexpected happens, explicitly fail the test        
+        assert False, f"Unexpected error occurred: {error}"
