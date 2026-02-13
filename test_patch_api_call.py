@@ -15,5 +15,7 @@ def test_patch_request():  # Pytest recognizes this as a test function
         print("Response Body:", response.json())  # Print JSON response returned from API
         
     except Exception as error:             # Catch any exception that occurs during request
-        print("An error occurred during the PATCH request.")  # General failure message
-        print("Caught Error:", error)  # Print the actual exception details
+        print("An error occurred during the PATCH request.")  # Generic error message
+       
+        # If anything unexpected happens, explicitly fail the test        
+        assert False, f"Unexpected error occurred: {error}"

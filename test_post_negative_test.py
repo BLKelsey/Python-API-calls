@@ -2,7 +2,7 @@ import requests  # Import the requests library to send HTTP requests
 
 def test_post_fail_request():  # Pytest will detect and run this function as a test
 
-    url = "https://jsonplaceholder.typicode.com/postz"  # Intentionally incorrect endpoint (should return 404)
+    url = "https://jsonplaceholder.typicode.com/postz"  # Intentionally incorrect endpoint (should return error)
     
     data = {                         # Payload dictionary (not used here since this is a GET request)
         "username": "Brian",
