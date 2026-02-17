@@ -11,9 +11,8 @@ def test_get_headers():  # Pytest recognizes this function as a test
 
     response = requests.get(url, headers=headers)  # Send GET request with custom headers
 
-    print("Status Code:", response.status_code)   # Display HTTP status code returned by server
+    print("   Status Code:", response.status_code)   # Display HTTP status code returned by server
     print("Response Headers:", response.headers)  # Display headers returned by the server
-    print()  
     print("Response Body:", response.json())       # Display JSON body of the response
 
     assert response.status_code == 200  # Verify request succeeded 
