@@ -20,9 +20,9 @@ def test_agify_response_structure():
     # -------------------------------
     data = response.json()
 
-    # -------------------------------
+    # --------------------------------------
     # Step 4: Validate required fields exist
-    # -------------------------------
+    # ---------------------------------------
     expected_fields = ["name", "age", "count"]
 
     for field in expected_fields:
@@ -30,9 +30,9 @@ def test_agify_response_structure():
             f"Missing field: {field}"
     print(f"Data: {data}")
 
-    # ----------------------------------------------
+    # ------------------------------------------------
     # Step 5: Validate data types - schema validation
-    # ---------------------------------------------
+    # ------------------------------------------------
     assert isinstance(data["age"], int), \
         f"age is not integer. {type(data['age'])}"
 
