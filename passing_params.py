@@ -23,7 +23,6 @@ def test_get_coin_list():
     assert response.status_code == 200, \
         f"Expected 200, got {response.status_code}"
 
-    # Convert the response body (JSON) into Python data  
     data = response.json()
 
     # Print how many coins were returned on page 1
