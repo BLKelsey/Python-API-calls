@@ -34,6 +34,8 @@ def exchangerate_base_url():
 @pytest.fixture(params=["latest/USD"])
 def exchangerate_endpoint_url(request):
     return f"{request.param}"
+
+
     
 
 
