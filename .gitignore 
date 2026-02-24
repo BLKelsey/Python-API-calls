@@ -3,6 +3,8 @@ __pycache__/
 .env
 .venv/
 Exchange Rate API key.odt
+__pycache__/
+*.pyc
 
 
 
