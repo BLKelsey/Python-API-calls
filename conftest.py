@@ -1,7 +1,10 @@
 import pytest
 import requests
 
-# ----Restcountries Fixtures----
+# ----------------------
+# Restcountries Fixtures
+# ----------------------
+
 @pytest.fixture
 def restcountries_base_url():
   return "https://restcountries.com/v3.1"
@@ -26,7 +29,9 @@ def currency(request):
 def languages(request):
     return f"?fields={request.param}"
  
- #-----Exchangerate Fixtures----
+ #-----------------------
+ # Exchangerate Fixtures
+ #-----------------------
 @pytest.fixture
 def exchangerate_base_url():
   return "https://api.exchangerate-api.com/v4/"
@@ -35,8 +40,37 @@ def exchangerate_base_url():
 def exchangerate_endpoint_url(request):
     return f"{request.param}"
 
+#--------------------
+# Weather Fixtures
+#--------------------
 
-    
+@pytest.fixture
+def test_weather_base_url():
+    return "http://api.weatherbit.io/v2.0/current"
+
+@pytest.fixture(params=["9981631dda5b49f2acb193ff8db04ebc"])
+def test_key(request):
+    return request.param
+
+@pytest.fixture (params=["Istanbul"])
+def city(request):
+    return request.param
+
+@pytest.fixture (params=['Turkey'])
+def country(request):
+    return request.param
+
+@pytest.fixture(params=["I"])  # I = Fahrenheit
+def units(request):
+    return request.param
+
+#@pytest.fixture(params=["temperature"])
+#def temperature(request):
+#    return request.param   
+
+
+
+
 
 
 
