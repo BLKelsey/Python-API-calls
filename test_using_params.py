@@ -8,8 +8,6 @@ def test_get_name_countries(restcountries_base_url, endpoint_url):
     url = f"{restcountries_base_url}{endpoint_url}"
 
     response = requests.get(url)
-
-    # Verify HTTP response is OK
     assert response.status_code == 200
 
     # Convert JSON response to Python object

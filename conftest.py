@@ -64,9 +64,7 @@ def country(request):
 def units(request):
     return request.param
 
-#@pytest.fixture(params=["temperature"])
-#def temperature(request):
-#    return request.param   
+
 
 
 
