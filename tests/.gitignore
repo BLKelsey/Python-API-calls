@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+.vscode/
+.idea/
+*.log
+*.pyo
+*.pyd
+.pytest_cache/
+
+github-oauth-practice.code-workspace
+__pycache__/conftest.cpython-314-pytest-8.3.5.pyc
+__pycache__/conftest.cpython-314-pytest-9.0.2.pyc
