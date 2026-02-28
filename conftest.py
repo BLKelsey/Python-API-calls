@@ -1,5 +1,5 @@
 import pytest
-import requests
+#import requests
 
 # ----------------------
 # Restcountries Fixtures
